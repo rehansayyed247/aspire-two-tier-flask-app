@@ -7,7 +7,7 @@ services:
     container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: devops
+      MYSQL_DATABASE: DevOps
       MYSQL_USER: admin
       MYSQL_PASSWORD: admin
     volumes:
