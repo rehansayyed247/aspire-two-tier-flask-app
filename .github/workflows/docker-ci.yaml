@@ -5,15 +5,14 @@ on:
     branches-ignore:
       - 'main'
       - 'master'
-  # pull_request:
-  # workflow_dispatch:
 
 jobs:
   docker-ci:
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: ${{ github.repository }}:${{ github.sha }}
+      IMAGE_NAME: aspire-two-tier-flask-app:${{ github.sha }}
       TEST_COMMAND: pytest -q
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
