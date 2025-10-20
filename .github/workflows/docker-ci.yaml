@@ -31,6 +31,7 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: false
+          load: true        # ✅ This loads the built image into the local Docker daemon
           tags: ${{ env.IMAGE_NAME }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache,mode=max
