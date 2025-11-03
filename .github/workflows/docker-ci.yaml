@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       IMAGE_NAME: aspire-two-tier-flask-app:${{ github.sha }}
-      TEST_COMMAND: pytest -v tests/
+      TEST_COMMAND: pytest -v /app/tests
 
     steps:
       - name: Checkout repository
