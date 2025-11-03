@@ -37,4 +37,4 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache,mode=max
 
       - name: Run tests inside built image
-        run: docker run --rm ${{ env.IMAGE_NAME }} sh -c "docker compose up"
+        run: docker run --rm ${{ env.IMAGE_NAME }} sh -c "${{ env.TEST_COMMAND }}"
